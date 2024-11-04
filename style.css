@@ -1,0 +1,238 @@
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: #424f6f;
+}
+
+#container {
+    width: 400px;
+    height: 400px;
+    padding: 0;
+    box-sizing: border-box;
+    background: #424f6f;
+}
+
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+#spooky {
+    margin: 10% auto;
+    width: 80%;
+    height: 80%;
+    animation: floaty 2s infinite;
+    position: relative;
+}
+
+#hat {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 30px;
+    background: #252c49;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#hat:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 25px;
+    background: #f3ea6c;
+    border-radius: 10px;
+}
+
+#spooky #body {
+    position: relative;
+    margin: 50px auto 0;
+    width: 180px;
+    height: 220px;
+    background: #cdcfcf;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+}
+
+#shirt {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 40px;
+    background: #ff0000;
+    border-radius: 10px;
+}
+
+#bow-tie {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 20px;
+    background: #fcfafa;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#bow-tie:before,
+#bow-tie:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background: #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#bow-tie:before {
+    left: -10px;
+    top: 5px;
+    transform: rotate(45deg);
+}
+
+#bow-tie:after {
+    right: -10px;
+    top: 5px;
+    transform: rotate(-45deg);
+}
+
+#wings {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.wing {
+    width: 80px;
+    height: 40px;
+    background: #f2fbf1;
+    border-radius: 20px;
+    position: relative;
+}
+
+.left-wing {
+    transform: rotate(-30deg);
+}
+
+.right-wing {
+    transform: rotate(30deg);
+}
+
+#spooky #body #eyes {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 90px 0 0;
+    width: 90px;
+    height: 20px;
+}
+
+#spooky #body #eyes:before,
+#spooky #body #eyes:after {
+    content: ' ';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #252c49;
+    border-radius: 50%;
+}
+
+#spooky #body #mouth {
+    background: #252c49;
+    margin: 25px auto 0;
+    width: 60px;
+    height: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#spooky #body #mouth:before {
+    content: ' ';
+    display: block;
+    background: #fff;
+    margin-left: 20px;
+    width: 10px;
+    height: 10px;
+}
+
+#hands {
+    position: absolute;
+    bottom: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hand {
+    width: 20px;
+    height: 40px;
+    background: #f2fbf1;
+    border-radius: 10px;
+}
+
+#spooky #body #feet {
+    position: absolute;
+    display: flex;
+    bottom: -18px;
+    width: 180px;
+    height: 36px;
+}
+
+.leg {
+    flex: 1;
+    background: #f2fbf1;
+    border-radius: 20px;
+    height: 36px;
+    position: relative;
+}
+
+.leg:not(:last-child) {
+    margin-right: 5px;
+}
+
+#shadow {
+    margin: -90px auto 0;
+    background: #252c49;
+    width: 180px;
+    height: 40px;
+    border-radius: 50%;
+    animation: zoomy 2s infinite;
+}
+
+@keyframes floaty {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes zoomy {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+}
